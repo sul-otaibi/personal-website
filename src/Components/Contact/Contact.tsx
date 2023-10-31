@@ -9,20 +9,31 @@ function Contact() {
         Contact Me
       </h1>
       <div className="flex justify-center gap-8">
-        <button className="py-4 text-2xl bg-white rounded-md w-60 drop-shadow-xl hover:font-medium">
-          <a href="" className="block w-full h-full">
+        <button className="px-10 py-4 text-2xl bg-white rounded-md drop-shadow-xl hover:font-medium">
+          <a
+            href="https://www.linkedin.com/in/sul-otaibi/"
+            target="_blank"
+            className="block w-full h-full"
+          >
             <FontAwesomeIcon icon={faLinkedin} /> linkedin
           </a>
         </button>
 
-        <button className="py-4 text-2xl bg-white rounded-md w-60 drop-shadow-xl hover:font-medium">
-          <a href="" className="block w-full h-full">
-            <FontAwesomeIcon icon={faEnvelope} /> Email
+        <button className="px-10 py-4 text-2xl bg-white rounded-md drop-shadow-xl hover:font-medium">
+          <a
+            href="mailto:sul.otaibi@outlook.sa"
+            className="block w-full h-full"
+          >
+            <FontAwesomeIcon icon={faEnvelope} /> sul.otaibi@outlook.sa
           </a>
         </button>
 
-        <button className="py-4 text-2xl bg-white rounded-md w-60 drop-shadow-xl hover:font-medium">
-          <a href="" className="block w-full h-full">
+        <button className="px-10 py-4 text-2xl bg-white rounded-md drop-shadow-xl hover:font-medium">
+          <a
+            href="https://drive.google.com/file/d/1hiWdeRaY8EC7P_97l8DQH8v_0AHB_C6e/view?usp=sharing"
+            target="_blank"
+            className="block w-full h-full"
+          >
             <FontAwesomeIcon icon={faFilePdf} /> My resume
           </a>
         </button>
