@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contact() {
   return (
-    <main id="contact" className="min-h-[24rem] px-28 p-5 pb-20 text-2xl">
+    <main
+      id="contact"
+      className="min-h-[24rem] px-4 lg:px-28 p-5 pb-20 text-2xl"
+    >
       <h1 className="mt-5 mb-10 font-serif text-5xl tracking-wider">
         Contact Me
       </h1>
-      <div className="flex justify-center gap-8">
+      <div className="flex justify-center gap-8 max-lg:px-8 max-lg:flex-col">
         <button className="px-10 py-4 text-2xl bg-white rounded-md drop-shadow-xl hover:font-medium">
           <a
             href="https://www.linkedin.com/in/sul-otaibi/"

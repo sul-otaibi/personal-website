@@ -14,7 +14,7 @@ function ProjectCard(props: CardData) {
   ));
 
   return (
-    <section className="flex flex-col gap-4 p-4 rounded-md w-[25rem] bg-white drop-shadow-xl justify-between">
+    <section className="flex flex-col justify-between gap-4 p-4 bg-white rounded-md lg:w-96 drop-shadow-xl">
       <div className="flex flex-col gap-4">
         <div className="flex justify-between gap-2">
           <h1 className="text-3xl font-medium tracking-tight">{props.title}</h1>

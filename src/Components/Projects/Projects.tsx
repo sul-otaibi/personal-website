@@ -2,9 +2,9 @@ import ProjectCard from "./ProjectCard";
 
 function Projects() {
   return (
-    <main id="projects" className="min-h-[24rem] py-4 px-28 text-2xl">
+    <main id="projects" className="min-h-[24rem] py-4 px-4 lg:px-28 text-2xl">
       <h1 className="my-5 font-serif text-5xl tracking-wider">Projects</h1>
-      <section className="flex flex-wrap gap-5 py-8">
+      <section className="flex flex-wrap justify-between gap-5 py-8">
         <ProjectCard
           title="Personal website"
           description={`A personal website to demonstrate the skills acquired throughout the years.`}

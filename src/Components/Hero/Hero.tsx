@@ -37,8 +37,8 @@ function Hero() {
   };
 
   return (
-    <main className="flex flex-col flex-wrap justify-center w-full h-[80vh]  px-52">
-      <section className="flex items-center w-full h-full gap-32">
+    <main className="flex flex-col flex-wrap justify-center w-full h-full lg:h-[80vh] py-8 px-4 lg:px-52">
+      <section className="flex flex-wrap items-center w-full h-full gap-8 lg:gap-32">
         <section className="flex flex-col font-serif tracking-wider text-8xl">
           <div>Sultan</div>
           <div className="my-8">Alotaibi</div>
@@ -54,8 +54,13 @@ function Hero() {
             </a>
           </button>
         </section>
-        <section id="about" className="flex flex-col justify-center text-2xl">
-          <p className="font-serif text-4xl tracking-wider">Who am I?</p>
+        <section
+          id="about"
+          className="flex flex-col items-center justify-center text-2xl lg:items-start"
+        >
+          <p className="self-start font-serif text-4xl tracking-wider">
+            Who am I?
+          </p>
           <div id="text" className="max-w-4xl">
             {flag ? s1 : ""}
             {!flag ? s2 : ""}
