@@ -2,9 +2,12 @@ import ProjectCard from "./ProjectCard";
 
 function Projects() {
   return (
-    <main id="projects" className="min-h-[24rem] py-4 px-4 lg:px-28 text-2xl">
+    <main
+      id="projects"
+      className="min-h-[24rem] pt-4 pb-16 px-4 lg:px-28 text-2xl"
+    >
       <h1 className="my-5 font-serif text-5xl tracking-wider">Projects</h1>
-      <section className="flex flex-wrap justify-between gap-5 py-8">
+      <section className="grid grid-cols-1 gap-8 xl:grid-cols-3">
         <ProjectCard
           title="Personal website"
           description={`A personal website to demonstrate the skills acquired throughout the years.`}
@@ -22,7 +25,7 @@ function Projects() {
           description={`Job Application Tracking System (JATS). This is a simple website to help track job applications.`}
           github="https://github.com/sul-otaibi/JATS-remake"
           liveDemo="https://jats.netlify.app"
-          tech={["html", "css", "javascript", "git"]}
+          tech={["vue", "tailwindcss", "typescript", "git"]}
         />
         <ProjectCard
           title="Calculator"

@@ -2,9 +2,9 @@ import SkillCard from "./SkillCard";
 
 function Skills() {
   return (
-    <main id="skills" className="min-h-[24rem] px-4 lg:px-28 pt-4 pb-12">
+    <main id="skills" className="min-h-[24rem] px-4 lg:px-28 pt-4 pb-16">
       <h1 className="mt-5 mb-10 font-serif text-5xl tracking-wider">Skills</h1>
-      <ul className="flex flex-wrap justify-evenly lg:justify-between gap-y-10">
+      <ul className="grid w-full grid-cols-2 gap-8 xl:grid-cols-4 2xl:grid-cols-6">
         <SkillCard name="Angular" icon="angular" />
         <SkillCard name="ReactJS" icon="react" />
         <SkillCard name="VueJS" icon="vue" />

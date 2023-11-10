@@ -38,8 +38,8 @@ function Hero() {
 
   return (
     <main className="flex flex-col flex-wrap justify-center w-full h-full lg:h-[80vh] py-8 px-4 lg:px-52">
-      <section className="flex flex-wrap items-center w-full h-full gap-8 lg:gap-32">
-        <section className="flex flex-col font-serif tracking-wider text-8xl">
+      <section className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 place-items-center">
+        <section className="flex flex-col font-serif tracking-wider text-8xl min-w-[30rem]">
           <div>Sultan</div>
           <div className="my-8">Alotaibi</div>
           <span
