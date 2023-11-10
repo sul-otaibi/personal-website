@@ -20,7 +20,8 @@ function Projects() {
         <ProjectCard
           title="JATS"
           description={`Job Application Tracking System (JATS). This is a simple website to help track job applications.`}
-          github="https://github.com/"
+          github="https://github.com/sul-otaibi/JATS-remake"
+          liveDemo="https://jats.netlify.app"
           tech={["html", "css", "javascript", "git"]}
         />
         <ProjectCard

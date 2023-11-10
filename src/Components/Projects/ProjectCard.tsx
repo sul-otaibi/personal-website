@@ -20,10 +20,10 @@ function ProjectCard(props: CardData) {
           <h1 className="text-3xl font-medium tracking-tight">{props.title}</h1>
           <div className="flex gap-2">
             {props.liveDemo ? (
-              <LinkButton iconName="link" link={"https://google.com"} />
+              <LinkButton iconName="link" link={props.liveDemo} />
             ) : null}
             {props.github ? (
-              <LinkButton iconName="github" link={"https://github.com"} />
+              <LinkButton iconName="github" link={props.github} />
             ) : null}
           </div>
         </div>
