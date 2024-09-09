@@ -11,7 +11,7 @@ function Projects() {
         <ProjectCard
           title="Personal website"
           description={`A personal website to demonstrate the skills acquired throughout the years.`}
-          github="https://github.com/"
+          github="https://github.com/sul-otaibi/personal-website"
           tech={["react", "tailwindcss", "git"]}
         />
         <ProjectCard
@@ -21,11 +21,11 @@ function Projects() {
           tech={["angular", "tailwindcss", "typescript", "git"]}
         />
         <ProjectCard
-          title="JATS"
-          description={`Job Application Tracking System (JATS). This is a simple website to help track job applications.`}
+          title="JAT"
+          description={`Job Application Tracker (JAT). This is a simple website to help track job applications.`}
           github="https://github.com/sul-otaibi/JATS-remake"
           liveDemo="https://jats.netlify.app"
-          tech={["vue", "tailwindcss", "typescript", "git"]}
+          tech={["vue", "tailwindcss", "git"]}
         />
         <ProjectCard
           title="Calculator"
