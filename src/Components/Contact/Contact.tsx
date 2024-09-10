@@ -1,5 +1,5 @@
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contact() {
@@ -28,16 +28,6 @@ function Contact() {
             className="block w-full h-full"
           >
             <FontAwesomeIcon icon={faEnvelope} /> sul.otaibi@outlook.sa
-          </a>
-        </button>
-
-        <button className="px-10 py-4 text-2xl bg-white rounded-md drop-shadow-xl hover:font-medium">
-          <a
-            href="https://drive.google.com/file/d/1hiWdeRaY8EC7P_97l8DQH8v_0AHB_C6e/view?usp=sharing"
-            target="_blank"
-            className="block w-full h-full"
-          >
-            <FontAwesomeIcon icon={faFilePdf} /> My resume
           </a>
         </button>
       </div>
