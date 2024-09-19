@@ -17,16 +17,16 @@ const Navbar = ({ sections, scrollToSection }) => {
   };
 
   return (
-    <nav className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 shadow-lg">
-      <div className="container mx-auto px-4">
+    <nav className="sticky top-0 left-0 right-0 z-50 shadow-lg navbar bg-base-100">
+      <div className="container px-4 mx-auto">
         <div className="flex-1">
-          <button onClick={() => handleNavClick('home')} className="btn btn-ghost normal-case text-xl">SA</button>
+          <button onClick={() => handleNavClick('home')} className="text-xl normal-case btn btn-ghost">SA</button>
         </div>
         <div className="flex-none hidden lg:block">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="px-1 menu menu-horizontal">
             {sections.map((section) => (
               <li key={section}>
-                <button onClick={() => handleNavClick(section)} className="hover:bg-base-200 rounded-lg">
+                <button onClick={() => handleNavClick(section)} className="rounded-lg hover:bg-base-200">
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
               </li>
@@ -44,13 +44,13 @@ const Navbar = ({ sections, scrollToSection }) => {
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden" onClick={closeMenu}>
           <div className="absolute inset-0 bg-gray-800 opacity-50"></div>
-          <nav className="absolute top-0 right-0 bottom-0 flex w-5/6 max-w-sm py-6 px-6 bg-base-100 shadow-xl">
+          <nav className="absolute top-0 bottom-0 right-0 flex w-5/6 max-w-sm px-6 py-6 shadow-xl bg-base-100">
             <ul className="space-y-2">
               {sections.map((section) => (
                 <li key={section}>
                   <button
                     onClick={() => handleNavClick(section)}
-                    className="block px-4 py-2 hover:bg-base-200 rounded-lg w-full text-left"
+                    className="block w-full px-4 py-2 text-left rounded-lg hover:bg-base-200"
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>

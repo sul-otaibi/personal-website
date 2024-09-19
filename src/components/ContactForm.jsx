@@ -17,7 +17,7 @@ const ContactForm = () => {
       form.current,
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     )
-      .then((response) => {
+      .then(() => {
         toast.success('Email sent successfully!', {
           position: 'top-right',
           autoClose: 2000,
@@ -34,7 +34,7 @@ const ContactForm = () => {
         });
         e.target.reset();
         document.getElementById('error-container').style.display = `none`;
-      }, (error) => {
+      }, () => {
         toast.error('Failed to send email.', {
           position: 'top-right',
           autoClose: 2000,
@@ -54,15 +54,15 @@ const ContactForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 w-80 md:w-96 mx-auto">
-      <div id="error-container" role="alert" className="alert alert-error text-base-100 font-medium">
+    <form ref={form} onSubmit={sendEmail} className="flex flex-col mx-auto space-y-4 w-80 md:w-96">
+      <div id="error-container" role="alert" className="font-medium alert alert-error text-base-100">
         <div>There seems to be a problem with the form.
         Please try contacting me on <a href="mailto:sul.otaibi@outlook.sa" className='font-mono font-bold'>sul.otaibi@outlook.sa</a></div>
       </div>
       <input type="text" name="user_name" placeholder="Name" className="input input-bordered" required />
       <input type="email" name="user_email" placeholder="Email" className="input input-bordered" required />
       <textarea name="message" placeholder="Message" className="textarea textarea-bordered" required />
-      <button type="submit" className="btn btn-primary text-base-100 text-lg font-extrabold">Send Message</button>
+      <button type="submit" className="text-lg font-extrabold btn btn-primary text-base-100">Send Message</button>
     </form>
   );
 };

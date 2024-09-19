@@ -190,11 +190,11 @@ function App() {
 
       <div className="snap-container">
         <section id="home" className="section hero min-h-screen bg-base-300 bg-opacity-25 backdrop-blur-[3px] flex items-center justify-center relative px-6 lg:px-20">
-          <div className="hero min-h-screen z-10 relative">
+          <div className="relative z-10 min-h-screen hero">
             <div className="hero-content flex-col md:min-h-[75%] gap-16 md:gap-24">
               <div className="card md:min-w-max">
-                <div className="card-body h-full w-full p-0 m-0 md:px-4 lg:px-6">
-                  <h2 className="card-title text-6xl text-wrap">Sultan Alotaibi</h2>
+                <div className="w-full h-full p-0 m-0 card-body md:px-4 lg:px-6">
+                  <h2 className="text-6xl card-title text-wrap">Sultan Alotaibi</h2>
                   <p className="text-3xl">Software Engineer</p>
                 </div>
               </div>
@@ -212,35 +212,35 @@ function App() {
         </section>
 
         <section id="skills" className="section bg-base-100 bg-opacity-25 backdrop-blur-[2px] flex items-center justify-center relative md:px-11 xl:px-20">
-          <div className="text-center px-4 z-10 relative max-w-full">
-            <h2 className="text-4xl font-bold mb-6">Skills</h2>
-            <div className="md:flex flex-wrap justify-center gap-4 xl:gap-8 hidden">
+          <div className="relative z-10 max-w-full px-4 text-center">
+            <h2 className="mb-6 text-4xl font-bold">Skills</h2>
+            <div className="flex-wrap justify-center hidden gap-4 md:flex xl:gap-8">
               {skills.map((value, index) => {
                 return (
                   <div className="card bg-base-100 card-compact w-40 shadow-xl h-[8.25rem] lg:h-40" key={index}>
                     <figure className="">
                       <img
                         src={value.icon}
-                        className="rounded-xl w-20 h-20 pt-4" />
+                        className="w-20 h-20 pt-4 rounded-xl" />
                     </figure>
-                    <div className="card-body items-center text-center">
+                    <div className="items-center text-center card-body">
                       <h2 className="card-title">{value.title}</h2>
                     </div>
                   </div>
                 )
               })}
             </div>
-            <div className="carousel carousel-center bg-primary rounded-box max-w-full space-x-4 p-4 md:hidden">
+            <div className="max-w-full p-4 space-x-4 carousel carousel-center bg-primary rounded-box md:hidden">
               {skills.map((_, index) => {
                 return (
                   <div className="carousel-item" key={index}>
-                    <div className="card bg-base-100 card-compact w-56 shadow-xl">
+                    <div className="w-56 shadow-xl card bg-base-100 card-compact">
                       <figure className="">
                         <img
                           src={skills[index].icon}
-                          className="rounded-xl w-20 h-20 pt-4" />
+                          className="w-20 h-20 pt-4 rounded-xl" />
                       </figure>
-                      <div className="card-body items-center text-center">
+                      <div className="items-center text-center card-body">
                         <h2 className="card-title">{skills[index].title}</h2>
                       </div>
                     </div>
@@ -252,8 +252,8 @@ function App() {
         </section>
 
         <section id="projects" className="section bg-base-300 bg-opacity-25 backdrop-blur-[3px] flex items-center justify-center relative md:px-11 lg:px-20">
-          <div className="text-center px-4 z-10 relative">
-            <h2 className="text-4xl font-bold mb-6">Projects</h2>
+          <div className="relative z-10 px-4 text-center">
+            <h2 className="mb-6 text-4xl font-bold">Projects</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {projects.map((project, index) => {
                 return (
@@ -261,7 +261,7 @@ function App() {
                     <div className="card-body">
                       <h2 className="card-title md:text-2xl">{project.title}</h2>
                       <p className="text-lg text-left">{project.description}</p>
-                      <div className='flex gap-2 justify-between'>
+                      <div className='flex justify-between gap-2'>
                         <div className='flex justify-start'>
                           {project.tech.map((tech, index) => {
                             return (
@@ -269,12 +269,12 @@ function App() {
                             )
                           })}
                         </div>
-                        <div className="join justify-end">
-                          {project.live_url && <div className="card-actions justify-end">
-                            <a href={project.live_url}><button className="btn btn-sm btn-outline btn-primary px-1 md:px-4 join-item">Live version</button></a>
+                        <div className="justify-end join">
+                          {project.live_url && <div className="justify-end card-actions">
+                            <a href={project.live_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-4 join-item">Live version</button></a>
                           </div>}
-                          {project.github_url && <div className="card-actions justify-end">
-                            <a href={project.github_url}><button className="btn btn-sm btn-outline btn-primary px-1 md:px-4 join-item">Github repo</button></a>
+                          {project.github_url && <div className="justify-end card-actions">
+                            <a href={project.github_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-4 join-item">Github repo</button></a>
                           </div>}
                         </div>
                       </div>
@@ -287,8 +287,8 @@ function App() {
         </section>
 
         <section id="contact" className="section flex bg-base-100 bg-opacity-25 backdrop-blur-[2px] items-center justify-center relative">
-          <div className="text-center px-4 z-10 relative">
-            <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
+          <div className="relative z-10 px-4 text-center">
+            <h2 className="mb-6 text-4xl font-bold">Contact Me</h2>
             <ContactForm />
           </div>
         </section>
