@@ -32,11 +32,16 @@ function App() {
   ]
 
   const projects = [
+    // {
+    //   title: `Personal website`,
+    //   description: `- A portfolio website to showcase my skills and past projects. Built with React and Tailwind CSS.`,
+    //   live_url: `https://my-portfolio-sultan.netlify.app/`, github_url: `https://github.com/sul-otaibi/personal-website`,
+    //   tech: [`React`, `JavaScript`, `CSS`, `Git`]
+    // },
     {
-      title: `Personal website`,
-      description: `- A portfolio website to showcase my skills and past projects. Built with React and Tailwind CSS.`,
-      live_url: `https://my-portfolio-sultan.netlify.app/`, github_url: `https://github.com/sul-otaibi/personal-website`,
-      tech: [`React`, `JavaScript`, `CSS`, `Git`]
+      title: `ATS Resume Builder`, description: `- A website built to ease and reduce the friction of creating an ATS compliant resume without the need to entrust anybody with personal information.`,
+      live_url: `http://my-ats-resume.netlify.app/`, github_url: `https://github.com/sul-otaibi/ats-resume-builder`,
+      tech: [`Angular`, `TypeScript`, `HTML`, `CSS`, `Git`]
     },
     {
       title: `Job Application Tracker `, description: `- A Vue.js application designed to help users track their job applications.`, live_url: `https://jats.netlify.app/`, github_url: `https://github.com/sul-otaibi/JATS-remake`,
@@ -44,7 +49,7 @@ function App() {
     },
     {
       title: `School Management System`, description: `- A platform for managing students, teachers, administrators, and courses.`,
-      tech: [`Angular`, `TypeScript`, `HTML`,  `CSS`, `Git`]
+      tech: [`Angular`, `TypeScript`, `HTML`, `CSS`, `Git`]
     },
   ]
 
@@ -252,9 +257,9 @@ function App() {
         </section>
 
         <section id="projects" className="section bg-base-300 bg-opacity-25 backdrop-blur-[3px] flex items-center justify-center relative md:px-11 lg:px-20">
-          <div className="relative z-10 px-4 text-center">
+          <div className="relative z-10 max-w-full px-4 text-center">
             <h2 className="mb-6 text-4xl font-bold">Projects</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="justify-center hidden gap-4 md:flex-wrap md:flex">
               {projects.map((project, index) => {
                 return (
                   <div className="card card-compact w-[22rem] sm:w-96 bg-base-100 shadow-xl" key={index}>
@@ -271,10 +276,39 @@ function App() {
                         </div>
                         <div className="justify-end join">
                           {project.live_url && <div className="justify-end card-actions">
-                            <a href={project.live_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-4 join-item">Live version</button></a>
+                            <a href={project.live_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-2 join-item">Live version</button></a>
                           </div>}
                           {project.github_url && <div className="justify-end card-actions">
-                            <a href={project.github_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-4 join-item">Github repo</button></a>
+                            <a href={project.github_url}><button className="px-1 btn btn-sm btn-outline btn-primary md:px-2 join-item">Github repo</button></a>
+                          </div>}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <div className="max-w-full p-4 space-x-4 carousel carousel-center bg-primary rounded-box md:hidden">
+              {projects.map((project, index) => {
+                return (
+                  <div className="shadow-xl card card-compact bg-base-100 carousel-item" key={index}>
+                    <div className="card-body w-80">
+                      <h2 className="card-title md:text-2xl">{project.title}</h2>
+                      <p className="text-lg text-left">{project.description}</p>
+                      <div className='flex justify-between gap-2'>
+                        <div className='flex justify-start'>
+                          {project.tech.map((tech, index) => {
+                            return (
+                              <img src={skills.find((s) => s.title === tech)?.icon} className='w-6' key={index} />
+                            )
+                          })}
+                        </div>
+                        <div className="justify-end join">
+                          {project.live_url && <div className="justify-end card-actions">
+                            <a href={project.live_url}><button className="w-20 btn btn-sm btn-outline btn-primary md:px-4 join-item">Live version</button></a>
+                          </div>}
+                          {project.github_url && <div className="justify-end card-actions">
+                            <a href={project.github_url}><button className="w-20 btn btn-sm btn-outline btn-primary md:px-4 join-item">Github repo</button></a>
                           </div>}
                         </div>
                       </div>
