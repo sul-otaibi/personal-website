@@ -18,7 +18,6 @@ function App() {
     { title: `Django`, icon: `/images/django.svg` },
     { title: `Angular`, icon: `/images/angular.svg` },
     { title: `React`, icon: `/images/react.svg` },
-    { title: `Vue.js`, icon: `/images/vue.svg` },
     { title: `JavaScript`, icon: `/images/javascript.svg` },
     { title: `HTML`, icon: `/images/html.svg` },
     { title: `CSS`, icon: `/images/css.svg` },
@@ -26,9 +25,6 @@ function App() {
     { title: `Java`, icon: `/images/java.svg` },
     { title: `PostgreSQL`, icon: `/images/postgresql.svg` },
     { title: `Git`, icon: `/images/git.svg` },
-    { title: `NumPy`, icon: `/images/numpy.svg` },
-    { title: `Pandas`, icon: `/images/pandas.svg` },
-    { title: `Matplotlib`, icon: `/images/chart.svg` },
   ]
 
   const projects = [
